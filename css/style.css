@@ -1,0 +1,50 @@
+/* RESETS */
+
+body{
+    margin:0;
+    /* background:seagreen; */
+    font-family: sans-serif;
+}
+
+h3 {
+    margin: 0;
+}
+  
+a   {
+ text-decoration: none;
+}
+/* CUSTOM STYLES */
+header {
+    /* aligns direct children on a row left to right */
+    display: flex;
+    /*once you display flex you can display both horizontally and vertically with flex box properties*/
+    /* align items will align the direct children on the y axis (top to bottom)*/
+    align-items: center;
+    /* push the direct children as far apart  as possible using the space between them (x-axis)*/
+    /* justify-content: space-between; */
+    background: #804444;
+    padding: 25px 7% 20px;
+}
+
+header nav {
+    /* percentage values are always a percentage of the parents value(width/hieght) */
+    margin-left: 150px;
+}
+  
+header a{
+    color:orange;
+}
+
+  
+header a:hover, header a.active {
+    text-decoration: underline;
+
+}
+  
+header nav a{
+    color:white;
+}
+  
+header nav a:not(:last-child){
+    margin-right: 10px;
+}
