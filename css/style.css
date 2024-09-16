@@ -1,17 +1,27 @@
 /*VARIABLES*/
 :root {
     --dr: darkred;
-
+    --hg: 3e5641;
+    --ch: A24936;
+    --fl: D36135;
+    --je: 282B28;
+    --cb: 282B28;
+    --red: rgb(189, 3, 3);
 
 }
 
+html, body {
+    height: 100%;
+}
 
 /*RESETS */
 body{
-    background-color: seagreen;
+    background-color: darkgrey;
     margin:0;
     font-family: sans-serif;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 h3 {
@@ -43,7 +53,7 @@ header {
     align-items: center;
     /* push the direct children as far apart  as possible using the space between them (x-axis)*/
     /* justify-content: space-between; */
-    background-color:rgb(250, 95, 38);
+    background-color:rgb(65, 65, 65);
     padding: 25px 7% 20px;
 }
 
@@ -53,7 +63,7 @@ header nav {
 }
   
 header a{
-    color:var(--dr);
+    color:var(--red);
 }
 
   
@@ -74,6 +84,9 @@ main{
     display: flex;
     justify-content: space-between;
     padding: 45px 3% 0 10%;
+    background-image: linear-gradient(rgba(0,0,0,0)rgba(0,0,0,0)), url(../images/person.jpg);
+    background-size: cover;
+    flex: 1;
 }
 
 section p {
@@ -109,7 +122,7 @@ section button i {
 }
 
 section button:hover {
-    background-color: rgb(189, 3, 3);
+    background-color: --red;
     color: white;
     transform: translateX(10px);
 }
@@ -129,4 +142,32 @@ aside p {
 aside i {
     color: var(--dr);
     margin-right: 8px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(189, 3, 3);
+    padding: 20px 7%;
+    color: rgb(155, 154, 154);
+}
+
+/* MEDIA QUERY */
+/* Max width works for size and below */
+/* Min width works for size and above */
+@media (max-width:700px) {
+    main{
+        background-position: right;
+        background-image: linear-gradient(rgba(2323,62,0.5)rgba(23,23,62,0.5)), url(../images/person.jpg);
+
+    }
+}
+
+@media (max-width:400px) {
+    main{
+        background-position: 80% 100%;
+        background-size: cover;
+        background-image: linear-gradient(rgba(2323,62,0.5)rgba(23,23,62,0.5)), url(../images/person.jpg);
+
+    }
 }
